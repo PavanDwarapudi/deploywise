@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeployWise</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>DeployWise</h1>
+  <p>Paste a failed CI/CD build log and see what broke and how to fix it.</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Analyze a log</h2>
+    <textarea id="log" rows="12" placeholder="Paste your build log here..."></textarea>
+    <div class="row">
+      <button id="analyze">Analyze</button>
+      <select id="sample">
+        <option value="">Load a sample...</option>
+        <option value="compile">Compilation error</option>
+        <option value="dependency">Dependency issue</option>
+        <option value="test">Test failure</option>
+      </select>
+      <span id="status"></span>
+    </div>
+  </section>
+
+  <section class="card" id="resultCard" hidden>
+    <h2>Result</h2>
+    <p><span id="badge" class="badge"></span> <span id="summary"></span></p>
+    <table>
+      <thead><tr><th>Line</th><th>Category</th><th>Log entry</th><th>Likely cause</th><th>Try this</th></tr></thead>
+      <tbody id="findings"></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Failure categories <small id="total"></small></h2>
+    <table>
+      <thead><tr><th>Category</th><th>Count</th></tr></thead>
+      <tbody id="stats"></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Recent analyses</h2>
+    <table>
+      <thead><tr><th>#</th><th>Time</th><th>Category</th><th>Findings</th></tr></thead>
+      <tbody id="history"></tbody>
+    </table>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
