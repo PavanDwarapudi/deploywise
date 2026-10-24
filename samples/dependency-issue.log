@@ -1,0 +1,4 @@
+[INFO] Resolving dependencies
+[ERROR] Failed to execute goal on project shop: Could not resolve dependencies for project com.shop:shop:jar:1.0
+[ERROR] Could not find artifact org.example:missing-lib:jar:9.9.9 in central
+[INFO] BUILD FAILURE

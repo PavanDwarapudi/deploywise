@@ -3,5 +3,8 @@ target/
 *.iml
 .vscode/
 *.log
+!samples/*.log
+logs/
+eval-results.csv
 .env
 application-local.properties

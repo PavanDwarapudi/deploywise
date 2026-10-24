@@ -1,0 +1,5 @@
+[INFO] Compiling 12 source files
+[ERROR] COMPILATION ERROR :
+[ERROR] /app/src/main/java/com/shop/OrderService.java:[42,18] cannot find symbol
+[ERROR]   symbol:   method getTotl()
+[INFO] BUILD FAILURE
